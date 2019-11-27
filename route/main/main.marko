@@ -1,4 +1,5 @@
-$ const test = require('./main.js')
+$ var list = [1, 2, 4]
+$ var getData = require('./main.js').getData
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -6,10 +7,20 @@ $ const test = require('./main.js')
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title/>
 
+    <title/>
   </head>
-  <body/>
+  <body>
+    <await(getData)>
+      <@then|result|>
+      <for|row| of=result>
+      <p>${row.name}</p>
+    </for>
+      </@then>
+    </await>
+    
+
+  </body>
 
 </html>
 
