@@ -1,0 +1,8 @@
+{
+	"host": "kreditor.store",
+	"user": "cp447585_zhiliv",
+	"port": "3306",
+	"password": "Zhilcoff198900",
+	"database": "cp447585_kreditbase_test",
+	"charset": "utf8"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "marko.kreditor.store",
+  "description": "Движок для сайта kreditor.store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zhiliv/marko.kreditor.store",
+  "author": "Ivan Zhilnikov <35070562+zhiliv@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.15",
+    "app-root-path": "^3.0.0",
+    "async": "^3.1.0",
+    "bootstrap": "^4.3.1",
+    "cli-color": "^2.0.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "lasso": "^3.3.1",
+    "lasso-marko": "^2.4.8",
+    "marko": "^4.18.25",
+    "mysql2": "^2.0.1",
+    "popper.js": "^1.16.0",
+    "q": "^1.5.1"
+  }
+}
