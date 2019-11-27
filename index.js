@@ -24,7 +24,6 @@ const config = JSON.parse(fs.readFileSync(`${appRoot}/config/server.json`).toStr
 //запуск сервера
 try {
 	app.listen(config.port, err => {
-		console.log('TCL: err', err);
 		if (err) {
 			throw err;
 		}
@@ -45,5 +44,4 @@ try {
 } catch (err) {
 	let log = { action: 'app.listen', status: 'error', file: 'index.js', type: 'server', msg: err };
 	logs(log);
-	console.log('TCL: err', err);
 }
