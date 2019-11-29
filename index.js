@@ -4,10 +4,11 @@
  * @module index
  */
 
-//подулючение модуля для рабоы с MarcoJS
-require('marko/express');
+'use strict';
+
 //модуль для работы node js с MarcoJS
 require('marko/node-require');
+
 //модуль для работы с сервером
 const app = require('./lib/server');
 //получение корнеовго каталога
@@ -27,7 +28,9 @@ try {
 		if (err) {
 			throw err;
 		}
+		//вывод сообщения о запуске сервера
 		console.log(clc.green(`Сервер запущен на порту ${config.port}`));
+		//параметры логирования
 		let log = {
 			action: 'app.listen',
 			status: 'success',
@@ -36,12 +39,9 @@ try {
 			msg: `Сервер запущен успешно на порту ${config.port}`
 		};
 		logs(log);
-		//отправка события для активации автообновления
-		if (process.send) {
-			process.send('online');
-		}
 	});
 } catch (err) {
+	//параметры логирования
 	let log = { action: 'app.listen', status: 'error', file: 'index.js', type: 'server', msg: err };
 	logs(log);
 }

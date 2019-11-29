@@ -1,0 +1,1 @@
+$_mod.run("/marko.kreditor.store$1.0.0/route/main/main.marko.init");

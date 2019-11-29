@@ -1,24 +1,24 @@
-$ var list = [1, 2, 4]
-$ var getData = require('./main.js').getData
-
+$ var list = [1, 2, 4];
+<lasso-page/>
 <!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-
+    <lasso-head/>
     <title/>
+
   </head>
   <body>
-    <await(getData)>
+    <await(input.result)>
       <@then|result|>
-      <for|row| of=result>
-      <p>${row.name}</p>
-    </for>
+        <for|row| of=result>
+          <p style="color: green">${row.name}</p>
+        </for>
       </@then>
     </await>
-    
+    <lasso-body/>
 
   </body>
 
