@@ -1,4 +1,7 @@
-$ var list = [1, 2, 4];
+style {
+  @import ("./static/css/grid.css");
+}
+
 <lasso-page/>
 <!DOCTYPE html>
 <html lang="ru">
@@ -11,13 +14,31 @@ $ var list = [1, 2, 4];
 
   </head>
   <body>
-    <await(input.result)>
-      <@then|result|>
-        <for|row| of=result>
-          <p style="color: green">${row.name}</p>
-        </for>
-      </@then>
-    </await>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1>Заголовок</h1>
+
+        </div>
+        <div
+          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+          style="border: 2px solid gray; height: 15vh;">
+          Текст 1
+        </div>
+        <div
+          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+          style="border: 2px solid gray; height: 15vh;">
+          Текст 2
+        </div>
+        <div
+          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
+          style="border: 2px solid gray; height: 15vh;">
+          Текст 3
+        </div>
+
+      </div>
+
+    </div>
     <lasso-body/>
 
   </body>

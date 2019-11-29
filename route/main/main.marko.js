@@ -11,17 +11,12 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     lasso_page_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/config-tag")),
     lasso_head_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/head-tag")),
     component_globals_tag = marko_loadTag(require("marko/src/core-tags/components/component-globals-tag")),
-    marko_forEach = marko_helpers.f,
-    marko_escapeXml = marko_helpers.x,
-    await_tag = marko_loadTag(require("marko/src/core-tags/core/await/renderer")),
     lasso_body_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/body-tag")),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
     await_reorderer_tag = marko_loadTag(require("marko/src/core-tags/core/await/reorderer-renderer"));
 
 function render(input, out, __component, component, state) {
   var data = input;
-
-  var list = [1, 2, 4];
 
   lasso_page_tag({
       dirname: __dirname,
@@ -40,31 +35,15 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  await_tag({
-      _provider: input.result,
-      _name: "input.result",
-      then: {
-          renderBody: function(out, result) {
-            var $for$0 = 0;
+  out.w("<div class=\"container\"><div class=\"row\"><div class=\"col-12\"><h1>Заголовок</h1></div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 1</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 2</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 3</div></div></div>");
 
-            marko_forEach(result, function(row) {
-              var $keyScope$0 = "[" + (($for$0++) + "]");
+  lasso_body_tag({}, out, __component, "16");
 
-              out.w("<p style=\"color: green\">" +
-                marko_escapeXml(row.name) +
-                "</p>");
-            });
-          }
-        }
-    }, out, __component, "9");
-
-  lasso_body_tag({}, out, __component, "12");
-
-  lasso_body_tag({}, out, __component, "13");
+  lasso_body_tag({}, out, __component, "17");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "14");
+  await_reorderer_tag({}, out, __component, "18");
 
   out.w("</body></html>");
 }
@@ -77,12 +56,19 @@ marko_template._ = marko_renderer(render, {
 marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
+    deps: [
+      {
+          type: "css",
+          code: "@import (\"./static/css/bootstrap-grid.css\");",
+          virtualPath: "./main.marko.css",
+          path: "./main.marko"
+        }
+    ],
     id: "/marko.kreditor.store$1.0.0/route/main/main.marko",
     tags: [
       "@lasso/marko-taglib/taglib/config-tag",
       "@lasso/marko-taglib/taglib/head-tag",
       "marko/src/core-tags/components/component-globals-tag",
-      "marko/src/core-tags/core/await/renderer",
       "@lasso/marko-taglib/taglib/body-tag",
       "marko/src/core-tags/components/init-components-tag",
       "marko/src/core-tags/core/await/reorderer-renderer"
