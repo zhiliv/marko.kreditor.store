@@ -7,7 +7,7 @@
   "author": "Ivan Zhilnikov <35070562+zhiliv@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "browser-refresh  index.js"
   },
   "dependencies": {
     "@lasso/marko-taglib": "^1.0.15",

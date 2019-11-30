@@ -2,6 +2,7 @@ style {
   @import ("./static/css/grid.css");
 }
 
+$ const test = "тествоая фраза";
 <lasso-page/>
 <!DOCTYPE html>
 <html lang="ru">
@@ -17,18 +18,17 @@ style {
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1>Заголовок</h1>
-
+          <h1>Заголовок1</h1>
         </div>
         <div
           class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
           style="border: 2px solid gray; height: 15vh;">
-          Текст 1
+          ${test}
         </div>
         <div
           class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
           style="border: 2px solid gray; height: 15vh;">
-          Текст 3
+          Текст 323
         </div>
         <div
           class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
@@ -41,6 +41,7 @@ style {
     </div>
     <lasso-body/>
     <browser-refresh enabled="true"/>
+
   </body>
 
 </html>

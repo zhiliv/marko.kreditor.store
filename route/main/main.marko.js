@@ -11,6 +11,7 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     lasso_page_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/config-tag")),
     lasso_head_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/head-tag")),
     component_globals_tag = marko_loadTag(require("marko/src/core-tags/components/component-globals-tag")),
+    marko_escapeXml = marko_helpers.x,
     lasso_body_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/body-tag")),
     browser_refresh_tag = marko_loadTag(require("browser-refresh-taglib/refresh-tag")),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
@@ -18,6 +19,8 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 
 function render(input, out, __component, component, state) {
   var data = input;
+
+  const test = "тествоая фраза";
 
   lasso_page_tag({
       dirname: __dirname,
@@ -36,7 +39,9 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<div class=\"container\"><div class=\"row\"><div class=\"col-12\"><h1>Заголовок</h1></div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 1</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 3</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 2</div></div></div>");
+  out.w("<div class=\"container\"><div class=\"row\"><div class=\"col-12\"><h1>Заголовок1</h1></div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">" +
+    marko_escapeXml(test) +
+    "</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 323</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 2</div></div></div>");
 
   lasso_body_tag({}, out, __component, "16");
 
