@@ -1,9 +1,4 @@
-style {
-  @import ("./public/css/grid.css");
-  @import ("./public/css/text.css");
-  @import ("./public/css/custom.css");
-}
-
+<!-- Главная страница -->
 <lasso-page/>
 <!DOCTYPE html>
 <html lang="ru">
@@ -16,9 +11,10 @@ style {
 
   </head>
   <body>
-    <app-navbar navbar="${input.navbar}"/>
+    <app-navbar navbar=input.navbar/>
     <div class="container">
       <div class="row"/>
+      <!--      <p>${input.state.typeImg}</p> -->
 
     </div>
     <lasso-body/>

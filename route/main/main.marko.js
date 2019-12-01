@@ -68,12 +68,7 @@ marko_template.Component = marko_defineComponent({}, marko_template._);
 
 marko_template.meta = {
     deps: [
-      {
-          type: "css",
-          code: "@import (\"./public/css/grid.css\");\r\n  @import (\"./public/css/text.css\");\r\n  @import (\"./public/css/custom.css\");",
-          virtualPath: "./main.marko.css",
-          path: "./main.marko"
-        }
+      "./main.style.css"
     ],
     id: "/marko.kreditor.store$1.0.0/route/main/main.marko",
     tags: [
