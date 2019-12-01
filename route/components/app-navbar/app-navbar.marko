@@ -1,0 +1,17 @@
+
+<div class="topnav" id="myTopnav">
+  <for|item| of=state.listMenu>
+    <if(input.navbar == item.route)>
+      <navbar-button class="active" name="${item.name}" route="${item.route}"/>
+    </if>
+    <else>
+      <navbar-button name="${item.name}" route="${item.route}"/>
+    </else>
+  </for>
+  <a href="javascript:void(0);" class="icon" on-click("openBars")>
+    <span on-click="openBars">&#x2630;</span>
+
+  </a>
+
+</div>
+

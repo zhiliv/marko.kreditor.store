@@ -11,8 +11,8 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     lasso_page_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/config-tag")),
     lasso_head_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/head-tag")),
     component_globals_tag = marko_loadTag(require("marko/src/core-tags/components/component-globals-tag")),
-    app_menu_template = require("../components/app-menu/app-menu.marko"),
-    app_menu_tag = marko_loadTag(app_menu_template),
+    app_navbar_template = require("../components/app-navbar/app-navbar.marko"),
+    app_navbar_tag = marko_loadTag(app_navbar_template),
     lasso_body_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/body-tag")),
     browser_refresh_tag = marko_loadTag(require("browser-refresh-taglib/refresh-tag")),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
@@ -38,7 +38,9 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  app_menu_tag({}, out, __component, "9");
+  app_navbar_tag({
+      navbar: input.navbar
+    }, out, __component, "9");
 
   out.w("<div class=\"container\"><div class=\"row\"></div></div>");
 
@@ -78,7 +80,7 @@ marko_template.meta = {
       "@lasso/marko-taglib/taglib/config-tag",
       "@lasso/marko-taglib/taglib/head-tag",
       "marko/src/core-tags/components/component-globals-tag",
-      "../components/app-menu/app-menu.marko",
+      "../components/app-navbar/app-navbar.marko",
       "@lasso/marko-taglib/taglib/body-tag",
       "browser-refresh-taglib/refresh-tag",
       "marko/src/core-tags/components/init-components-tag",
