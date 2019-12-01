@@ -1,0 +1,27 @@
+class {
+  onCreate() {
+
+  }
+  openBars(){
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+  }
+}
+
+
+<div class="topnav" id="myTopnav">
+  <menu-button class="active"/>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" on-click("openBars")>
+    <span on-click="openBars">&#x2630;</span>
+
+  </a>
+
+</div>
+

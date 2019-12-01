@@ -1,8 +1,9 @@
 style {
-  @import ("./static/css/grid.css");
+  @import ("./public/css/grid.css");
+  @import ("./public/css/text.css");
+  @import ("./public/css/custom.css");
 }
 
-$ const test = "тествоая фраза";
 <lasso-page/>
 <!DOCTYPE html>
 <html lang="ru">
@@ -15,28 +16,9 @@ $ const test = "тествоая фраза";
 
   </head>
   <body>
+    <app-menu/>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1>Заголовок1</h1>
-        </div>
-        <div
-          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
-          style="border: 2px solid gray; height: 15vh;">
-          ${test}
-        </div>
-        <div
-          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
-          style="border: 2px solid gray; height: 15vh;">
-          Текст 323
-        </div>
-        <div
-          class="col-xs-12 col-sm-12 col-md-4 col-lg-4"
-          style="border: 2px solid gray; height: 15vh;">
-          Текст 2
-        </div>
-
-      </div>
+      <div class="row"/>
 
     </div>
     <lasso-body/>

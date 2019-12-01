@@ -11,7 +11,8 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     lasso_page_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/config-tag")),
     lasso_head_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/head-tag")),
     component_globals_tag = marko_loadTag(require("marko/src/core-tags/components/component-globals-tag")),
-    marko_escapeXml = marko_helpers.x,
+    app_menu_template = require("../components/app-menu/app-menu.marko"),
+    app_menu_tag = marko_loadTag(app_menu_template),
     lasso_body_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/body-tag")),
     browser_refresh_tag = marko_loadTag(require("browser-refresh-taglib/refresh-tag")),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
@@ -19,8 +20,6 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
 
 function render(input, out, __component, component, state) {
   var data = input;
-
-  const test = "тествоая фраза";
 
   lasso_page_tag({
       dirname: __dirname,
@@ -39,21 +38,21 @@ function render(input, out, __component, component, state) {
 
   component_globals_tag({}, out);
 
-  out.w("<div class=\"container\"><div class=\"row\"><div class=\"col-12\"><h1>Заголовок1</h1></div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">" +
-    marko_escapeXml(test) +
-    "</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 323</div><div class=\"col-xs-12 col-sm-12 col-md-4 col-lg-4\" style=\"border: 2px solid gray; height: 15vh;\">Текст 2</div></div></div>");
+  app_menu_tag({}, out, __component, "9");
 
-  lasso_body_tag({}, out, __component, "16");
+  out.w("<div class=\"container\"><div class=\"row\"></div></div>");
+
+  lasso_body_tag({}, out, __component, "12");
 
   browser_refresh_tag({
       enabled: "true"
-    }, out, __component, "17");
+    }, out, __component, "13");
 
-  lasso_body_tag({}, out, __component, "18");
+  lasso_body_tag({}, out, __component, "14");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "19");
+  await_reorderer_tag({}, out, __component, "15");
 
   out.w("</body></html>");
 }
@@ -69,7 +68,7 @@ marko_template.meta = {
     deps: [
       {
           type: "css",
-          code: "@import (\"./static/css/grid.css\");",
+          code: "@import (\"./public/css/grid.css\");\r\n  @import (\"./public/css/text.css\");\r\n  @import (\"./public/css/custom.css\");",
           virtualPath: "./main.marko.css",
           path: "./main.marko"
         }
@@ -79,6 +78,7 @@ marko_template.meta = {
       "@lasso/marko-taglib/taglib/config-tag",
       "@lasso/marko-taglib/taglib/head-tag",
       "marko/src/core-tags/components/component-globals-tag",
+      "../components/app-menu/app-menu.marko",
       "@lasso/marko-taglib/taglib/body-tag",
       "browser-refresh-taglib/refresh-tag",
       "marko/src/core-tags/components/init-components-tag",
