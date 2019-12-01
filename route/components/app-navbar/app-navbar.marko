@@ -1,7 +1,11 @@
+
 <div class="topnav" id="myTopnav">
+  <a style="padding: 0px; margin: 0px">
+  <img src="/static/img/logo/logoNAV.png" class="navlogo" width="50" height="50" style="">
+</a>
   <for|item| of=state.listMenu>
     <if(input.navbar == item.route)>
-      <navbar-button class="active" name=item.name route=item.route />
+      <navbar-button class="active" name=item.name route=item.route/>
 
     </if>
     <else>

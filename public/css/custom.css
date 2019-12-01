@@ -126,8 +126,8 @@ nav {
 }
 
 .topnav a:hover {
-	background-color: #ddd;
-	color: black;
+  background-color: rgb(58, 98, 56);
+  color: white;
 }
 
 .active {
@@ -144,6 +144,13 @@ nav {
 		display: none;
 	}
 	.topnav a.icon {
+		float: right;
+		display: block;
+  }
+  .topnav img:not(:first-child) {
+		display: none;
+	}
+	.topnav img.icon {
 		float: right;
 		display: block;
 	}
@@ -164,3 +171,8 @@ nav {
 		text-align: left;
 	}
 }
+
+.navlogo{
+  margin: 2px 15px 0px 2px
+}
+
