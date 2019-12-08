@@ -13,8 +13,16 @@
   <body>
     <app-navbar navbar=input.navbar/>
     <div class="container-fluid">
-      <app-menu/>
-      <div class="row"/>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <app-menu list=input.listCategory/>
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
+          <siteDescription typeImg=input.typeImg />
+        </div>
+
+      </div>
 
     </div>
     <lasso-body/>

@@ -15,6 +15,8 @@ var marko_template = module.exports = require("marko/src/html").t(__filename),
     app_navbar_tag = marko_loadTag(app_navbar_template),
     app_menu_template = require("../components/app-menu/app-menu.marko"),
     app_menu_tag = marko_loadTag(app_menu_template),
+    siteDescription_template = require("./components/siteDescription/siteDescription.marko"),
+    siteDescription_tag = marko_loadTag(siteDescription_template),
     lasso_body_tag = marko_loadTag(require("@lasso/marko-taglib/taglib/body-tag")),
     browser_refresh_tag = marko_loadTag(require("browser-refresh-taglib/refresh-tag")),
     init_components_tag = marko_loadTag(require("marko/src/core-tags/components/init-components-tag")),
@@ -44,23 +46,31 @@ function render(input, out, __component, component, state) {
       navbar: input.navbar
     }, out, __component, "9");
 
-  out.w("<div class=\"container-fluid\">");
+  out.w("<div class=\"container-fluid\"><div class=\"row\"><div class=\"col-sm-12 col-md-12 col-lg-3 col-xl-3\">");
 
-  app_menu_tag({}, out, __component, "11");
+  app_menu_tag({
+      list: input.listCategory
+    }, out, __component, "13");
 
-  out.w("<div class=\"row\"></div></div>");
+  out.w("</div><div class=\"col-sm-12 col-md-12 col-lg-9 col-xl-9\">");
 
-  lasso_body_tag({}, out, __component, "13");
+  siteDescription_tag({
+      typeImg: input.typeImg
+    }, out, __component, "15");
+
+  out.w("</div></div></div>");
+
+  lasso_body_tag({}, out, __component, "16");
 
   browser_refresh_tag({
       enabled: "true"
-    }, out, __component, "14");
+    }, out, __component, "17");
 
-  lasso_body_tag({}, out, __component, "15");
+  lasso_body_tag({}, out, __component, "18");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "16");
+  await_reorderer_tag({}, out, __component, "19");
 
   out.w("</body></html>");
 }
@@ -83,6 +93,7 @@ marko_template.meta = {
       "marko/src/core-tags/components/component-globals-tag",
       "../components/app-navbar/app-navbar.marko",
       "../components/app-menu/app-menu.marko",
+      "./components/siteDescription/siteDescription.marko",
       "@lasso/marko-taglib/taglib/body-tag",
       "browser-refresh-taglib/refresh-tag",
       "marko/src/core-tags/components/init-components-tag",
