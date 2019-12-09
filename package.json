@@ -33,6 +33,7 @@
     "popper.js": "^1.16.0",
     "q": "^1.5.1",
     "underscore": "^1.9.1",
+    "vanilla-lazyload": "^12.4.0",
     "zlib": "^1.0.5"
   }
 }

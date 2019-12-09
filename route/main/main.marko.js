@@ -34,9 +34,9 @@ function render(input, out, __component, component, state) {
 
   lasso_head_tag({}, out, __component, "5");
 
-  out.w("<title>Кредит, кредитная карта, займ, автокредит, ипотека онлайн</title>");
+  out.w("<title>Кредит, кредитная карта, займ, автокредит, ипотека онлайн</title><meta name=\"description\" content=\"Описание страницы сайта.\"> ");
 
-  lasso_head_tag({}, out, __component, "7");
+  lasso_head_tag({}, out, __component, "8");
 
   out.w("</head><body>");
 
@@ -44,33 +44,37 @@ function render(input, out, __component, component, state) {
 
   app_navbar_tag({
       navbar: input.navbar
-    }, out, __component, "9");
+    }, out, __component, "10");
 
   out.w("<div class=\"container-fluid\"><div class=\"row\"><div class=\"col-sm-12 col-md-12 col-lg-3 col-xl-3\">");
 
   app_menu_tag({
       list: input.listCategory
-    }, out, __component, "13");
+    }, out, __component, "14");
 
   out.w("</div><div class=\"col-sm-12 col-md-12 col-lg-9 col-xl-9\">");
 
   siteDescription_tag({
       typeImg: input.typeImg
-    }, out, __component, "15");
+    }, out, __component, "16");
 
   out.w("</div></div></div>");
 
-  lasso_body_tag({}, out, __component, "16");
+  lasso_body_tag({
+      externalScriptAttrs: {
+          defer: true
+        }
+    }, out, __component, "17");
 
   browser_refresh_tag({
       enabled: "true"
-    }, out, __component, "17");
+    }, out, __component, "18");
 
-  lasso_body_tag({}, out, __component, "18");
+  lasso_body_tag({}, out, __component, "19");
 
   init_components_tag({}, out);
 
-  await_reorderer_tag({}, out, __component, "19");
+  await_reorderer_tag({}, out, __component, "20");
 
   out.w("</body></html>");
 }

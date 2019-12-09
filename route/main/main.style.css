@@ -1,28 +1,3 @@
 @import url('./public/css/grid.css');
 @import url('./public/css/text.css');
 @import url('./public/css/custom.css');
-
-
-.btn-group button {
-  font-size: 15px;
-  background-color: #4CAF50; 
-  border: 1px solid green; 
-  color: white; 
-  padding: 10px 0px;
-  cursor: pointer; /* Указатель / значок руки */
-  width: 100%; /* Установите ширину, если это необходимо */
-  display: block; /* Заставить кнопки появляться друг под другом */
-}
-
-.btn-group button:not(:last-child) {
-  border-bottom: none; 
-}
-
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-
-.btn-group button:active {
-  background-color: #7fb981;
-  color: black;
-}
