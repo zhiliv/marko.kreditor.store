@@ -1,26 +1,26 @@
 <!-- блок навигации -->
 <div class="topnav" id="myTopnav">
   <!-- логотип сайта -->
-  <a style="padding: 0px; margin: 0px">
+  <div style="float: left; padding: 0px; margin: 0px">
     <img
-      src="/static/img/logo/logoNAV.png"
+      src=`/static/img/logo/logo_${input.typeDevice}.${input.typeImg}`
       class="navlogo"
-      width="50"
-      height="50"
-      alt="logo"/>
+      alt="logo"
+      loading="lazy"
+      />
 
-  </a>
+  </div>
   <!-- заполнение навигации -->
   <for|item| of=state.listMenu>
     <!-- проверка на активное меню -->
     <if(input.navbar == item.route)>
       <!-- элемент навигации с классом active -->
-      <navbar-button class="active" name=item.name route=item.route/>
+      <navbar-button class="active lnk" name=item.name route=item.route/>
 
     </if>
     <else>
       <!-- жлемент навигации -->
-      <navbar-button name=item.name route=item.route/>
+      <navbar-button class="lnk" name=item.name route=item.route/>
 
     </else>
 

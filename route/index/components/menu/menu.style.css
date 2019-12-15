@@ -1,4 +1,8 @@
 
+.btn-group{
+padding-top: 2%  
+}
+
 .btn-group button {
   font-size: 1.4em;
   background-color: #e5ebf1; 

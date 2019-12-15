@@ -6,7 +6,7 @@
   <header/>
   <body>
     <!-- навигационное меню -->
-    <navbar navbar=input.navbar/>
+    <navbar navbar=input.navbar typeDevice=input.typeDevice typeImg=input.typeImg />
     <!-- содержимое сайта -->
     <div class="container-fluid">
       <!-- создание стркои -->
@@ -20,7 +20,7 @@
         <!-- блок для содержимого -->
         <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
           <!-- описание сайта -->
-          <siteDescription typeImg=input.typeImg/>
+          <siteDescription typeImg=input.typeImg typeDevice=input.typeDevice/>
           <list-category list=input.listCategory/>
         </div>
 
@@ -30,8 +30,9 @@
     <!-- скрыпты -->
     <lasso-body external-script-attrs={
       defer: true
-    }/>
+    }/> 
     <!-- автообновление страницы -->
+<!--     <browser-refresh enabled="true"/> -->
 
 
   </body>

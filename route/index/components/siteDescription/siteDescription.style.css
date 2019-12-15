@@ -63,7 +63,7 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 5vw;
-		line-height: 1.0em; /* межстрочный отступ */
+		line-height: 1em; /* межстрочный отступ */
 		text-align: justify !important;
 	}
 	/* содердимое описания */
@@ -126,8 +126,8 @@
 	}
 	/* содердимое описания */
 	div.textDesc {
-    padding: 0 5vw;
-    font-size: 1.6em; /* размер шрифта */
+		padding: 0 5vw;
+		font-size: 1.6em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -166,6 +166,9 @@
 		padding: 0 2vw;
 		font-size: 1.5em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
+	}
+	.i-siteTitle {
+		height: 18vh; /* высота */
 	}
 }
 

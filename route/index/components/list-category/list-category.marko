@@ -3,6 +3,13 @@
   <!-- заполнение навигации -->
   <for|item| of=input.list>
     <h2 class="text-center category">${item.typeProduct}</h2>
+    <for|product| of=item.list>
+      <div class="row">
+        <card name=product.name />
+        <card name=product.name />
+        <card name=product.name />
+      </div>
+    </for>
     <hr>
   </for>
 

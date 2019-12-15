@@ -139,7 +139,13 @@ nav {
 }
 
 .navlogo {
-	margin: 2px 15px 0px 2px;
+	margin: 5px 15px 0px 2px;
+	width: 3rem;
+}
+
+.aLogo {
+	padding: 0px;
+	margin: 0px;
 }
 
 /* @font-face {

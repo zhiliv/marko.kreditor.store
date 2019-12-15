@@ -1,0 +1,12 @@
+/* название продукта */
+.nameProduct {
+	color: #4a76a8;
+}
+
+.card img {
+}
+
+.bodyCard {
+	border: 1px solid #4872a3;
+	margin: 1vw;
+}
