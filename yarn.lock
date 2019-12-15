@@ -512,7 +512,7 @@ esprima@^4.0.0, esprima@~4.0.0:
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
   integrity sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
 
-estraverse@^4.2.0:
+estraverse@^4.2.0, estraverse@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.3.0.tgz#398ad3f3c5a24948be7725e83d11a7de28cdbd1d"
   integrity sha512-39nnKffWz8xN1BU/2c79n9nB9HDzo0niYUqx6xyqUnyoAnQyyWpOTdZEeiCch8BBu515t4wp9ZmgVfVhn9EBpw==
@@ -1028,9 +1028,9 @@ lru-queue@0.1:
     es5-ext "~0.10.2"
 
 marko@^4.10.0, marko@^4.18.27:
-  version "4.18.27"
-  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.27.tgz#dcc7687af81f063729f0a83195b752cf2d6f747f"
-  integrity sha512-baR/G7Hl+3TC3IEeO1j/R4a8+1x2+pgA0wpI9WOtPDJQJRKUGElqHaXIxdQGlS//cBS7PkEZIsypDFZvLfx41w==
+  version "4.18.28"
+  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.28.tgz#658910479e61caf5cb437f63a9fb7adfa5f17796"
+  integrity sha512-LNqyRBCRkLpgoGmPljdvczVnIszkuNRGdvbL1a5o6SIqyt7oXd8fo7H84rWHUReuKJk0Eb9xqvSd+DtU3ILvIw==
   dependencies:
     app-module-path "^2.2.0"
     argly "^1.0.0"
@@ -1041,7 +1041,7 @@ marko@^4.10.0, marko@^4.18.27:
     deresolve "^1.1.2"
     escodegen "^1.8.1"
     esprima "^4.0.0"
-    estraverse "^4.2.0"
+    estraverse "^4.3.0"
     events "^1.0.2"
     events-light "^1.0.0"
     he "^1.1.0"

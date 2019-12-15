@@ -1,0 +1,35 @@
+<!-- блок навигации -->
+<div class="topnav" id="myTopnav">
+  <!-- логотип сайта -->
+  <a style="padding: 0px; margin: 0px">
+    <img
+      src="/static/img/logo/logoNAV.png"
+      class="navlogo"
+      width="50"
+      height="50"
+      alt="logo"/>
+
+  </a>
+  <!-- заполнение навигации -->
+  <for|item| of=state.listMenu>
+    <!-- проверка на активное меню -->
+    <if(input.navbar == item.route)>
+      <!-- элемент навигации с классом active -->
+      <navbar-button class="active" name=item.name route=item.route/>
+
+    </if>
+    <else>
+      <!-- жлемент навигации -->
+      <navbar-button name=item.name route=item.route/>
+
+    </else>
+
+  </for>
+  <!-- значек бургера для мобильных устройств -->
+  <a href="javascript:void(0);" class="icon" on-click("openBars")>
+    <span on-click="openBars">&#x2630;</span>
+
+  </a>
+
+</div>
+

@@ -1,0 +1,8 @@
+/* подулчюение зарметки */
+@import url('./public/css/grid.css');
+/* подключение правил текста */
+@import url('./public/css/text.css');
+/* подключение стилей для навигации */
+@import url('./public/css/navbar.css');
+/* подулючение стилей для работы с изображениями */
+@import url('./public/css/img.css');

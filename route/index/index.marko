@@ -1,0 +1,40 @@
+<!-- Главная страница -->
+<lasso-page/>
+<!DOCTYPE html>
+<html lang="ru">
+  <!-- head -->
+  <header/>
+  <body>
+    <!-- навигационное меню -->
+    <navbar navbar=input.navbar/>
+    <!-- содержимое сайта -->
+    <div class="container-fluid">
+      <!-- создание стркои -->
+      <div class="row">
+        <!-- создание блока для меню страницы -->
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
+          <!-- меню страницы -->
+          <app-menu list=input.listCategory/>
+
+        </div>
+        <!-- блок для содержимого -->
+        <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
+          <!-- описание сайта -->
+          <siteDescription typeImg=input.typeImg/>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- скрыпты -->
+    <lasso-body external-script-attrs={
+      defer: true
+    }/>
+    <!-- автообновление страницы -->
+    <browser-refresh enabled="true"/>
+
+  </body>
+
+</html>
+
