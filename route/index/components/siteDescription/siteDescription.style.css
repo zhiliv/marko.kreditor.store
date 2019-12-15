@@ -3,13 +3,13 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 5vw;
-		font-size: 1.4em; /* размер шрифта */
+		font-size: 2.2em; /* размер шрифта */
 		line-height: 1em; /* межстрочный отступ */
 		text-align: justify !important;
 	}
 	/* содердимое описания */
 	div.textDesc {
-		font-size: 1.1em; /* размер шрифта */
+		font-size: 1.4em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -23,7 +23,6 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 5vw;
-		font-size: 1.8em; /* размер шрифта */
 		line-height: 1em; /* межстрочный отступ */
 		text-align: justify !important;
 	}
@@ -44,14 +43,13 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 5vw;
-		font-size: 2.3em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 		text-align: justify !important;
 	}
 	/* содердимое описания */
 	div.textDesc {
 		padding: 0 5vw;
-		font-size: 2em; /* размер шрифта */
+		font-size: 1.8em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -65,8 +63,7 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 5vw;
-		font-size: 2.2em; /* размер шрифта */
-		line-height: 1.1em; /* межстрочный отступ */
+		line-height: 1.0em; /* межстрочный отступ */
 		text-align: justify !important;
 	}
 	/* содердимое описания */
@@ -87,13 +84,12 @@
 	h1.titleDesc {
 		margin: 0 5vw;
 		text-align: justify !important;
-		font-size: 2.2em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* содердимое описания */
 	div.textDesc {
 		padding: 0 5vw;
-		font-size: 1.8em; /* размер шрифта */
+		font-size: 1.6em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -108,13 +104,12 @@
 	h1.titleDesc {
 		margin: 0 5vw;
 		text-align: justify !important;
-		font-size: 2.2em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* содердимое описания */
 	div.textDesc {
 		padding: 0 4vw;
-		font-size: 1.8em; /* размер шрифта */
+		font-size: 1.6em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -127,13 +122,12 @@
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
 	/* заголовок описания */
 	h1.titleDesc {
-		font-size: 2.1em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* содердимое описания */
 	div.textDesc {
-		padding: 0 5vw;
-		font-size: 1.6em; /* размер шрифта */
+    padding: 0 5vw;
+    font-size: 1.6em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -146,13 +140,12 @@
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) {
 	/* заголовок описания */
 	h1.titleDesc {
-		font-size: 2em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* содердимое описания */
 	div.textDesc {
 		padding: 0 5vw;
-		font-size: 1.6em; /* размер шрифта */
+		font-size: 1.5em; /* размер шрифта */
 		line-height: 1.2em; /* межстрочный отступ */
 	}
 	/* изобрадение для описания сайтаы */
@@ -166,7 +159,6 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 2vw;
-		font-size: 2.4em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* содердимое описания */
@@ -182,7 +174,6 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 2vw;
-		font-size: 2.2em; /* размер шрифта */
 		line-height: 1.1em; /* межстрочный отступ */
 	}
 	/* содердимое описания */

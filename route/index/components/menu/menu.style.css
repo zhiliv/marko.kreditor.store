@@ -1,12 +1,14 @@
+
 .btn-group button {
-  font-size: 1.2em;
-  background-color: #4CAF50; 
-  border: 1px solid #008000; 
-  color: black; 
+  font-size: 1.4em;
+  background-color: #e5ebf1; 
+  border: 1px solid #3d6898; 
+  color: #285473; 
   padding: 10px 0px;
   cursor: pointer; /* Указатель / значок руки */
   width: 100%; /* Установите ширину, если это необходимо */
   display: block; /* Заставить кнопки появляться друг под другом */
+  font-family: 'roboto';
 }
 
 .btn-group button:not(:last-child) {
@@ -14,10 +16,10 @@
 }
 
 .btn-group button:hover {
-  background-color: #3e8e41;
+  background-color: #bfcedd;
 }
 
 .btn-group button:active {
-  background-color: #7fb981;
-  color: rgb(82, 82, 82);
+  background-color: #285473;
+  color: white;
 }
