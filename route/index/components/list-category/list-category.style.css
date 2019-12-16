@@ -2,3 +2,33 @@
   color: #285473;
   margin: 0px;
 }
+
+.listProduct{
+ border: 1px solid #285473;
+ margin-top: 1vh;
+}
+
+
+/* Экстрамалые девайсы («портретные телефоны») < 576px, портрентная ориентация */
+@media (max-width: 575.98px) and (orientation: portrait) {
+  /* название категории продукта */
+  h2.category {
+    font-size: 1.9em;/* размер шрифта */
+  }
+}
+
+/* Экстрамалые девайсы («портретные телефоны») < 576px), ландщафная ориентация */
+@media (max-width: 575.98px) and (orientation: landscape) {
+  /* название категории продукта */
+  h2.category {
+    font-size: 1.6em;/* размер шрифта */
+  }
+}
+
+/* Большие девайсы (большие десктопы, разрешение более 1200px), ориентация ландшафтная */
+@media (min-width: 1200px) and (orientation: landscape) {
+  /* название категории продукта */
+  h2.category {
+    font-size: 2.4em;/* размер шрифта */
+  }
+}

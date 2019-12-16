@@ -1,12 +1,131 @@
 /* название продукта */
 .nameProduct {
 	color: #4a76a8;
-}
-
-.card img {
+	padding: 0px;
 }
 
 .bodyCard {
 	border: 1px solid #4872a3;
-	margin: 1vw;
+	margin: 0.5vw;
+	background: white;
+}
+
+/* Экстрамалые девайсы («портретные телефоны») < 576px, портрентная ориентация */
+@media (max-width: 575.98px) and (orientation: portrait) {
+  /* название продукта */
+  .card h3{
+    font-size: 1.60em;/* размер шрифта */
+    font-weight: 600;/* толщина шрифта */
+  }
+  /* размер банера продукта */
+  .card img {
+    padding: 2%; /* отступы */
+    width: 80%;/* ширина */
+  }
+}
+
+/* Экстрамалые девайсы («портретные телефоны») < 576px), ландщафная ориентация */
+@media (max-width: 575.98px) and (orientation: landscape) {
+  .card h3{
+    font-size: 1.65em;
+    font-weight: 600;
+  }
+}
+
+/* Малые девайсы, разрешение от 576 до 767.98 пикселей, портретаня ориентаци */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
+  .card h3{
+    font-size: 1.65em;
+    font-weight: 600;
+  }
+}
+
+/* Малые девайсы, разрешенеи от 576 до 767.98, ландшафтная ориентация */
+@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
+  /* название продукта */
+  .card h3{
+    font-size: 1.9em;/* размер шрифта */
+    font-weight: 600;/* толщина шрифта */
+  }
+  /* размер банера продукта */
+  .card img {
+    padding: 2%; /* отступы */
+    width: 60%;/* ширина */
+  }
+}
+
+/* Средние девайсы, разрешение от 768 до 991.98 пикселей, портретная ориентация */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
+    /* название продукта */
+    .card h3{
+      font-size: 1.4em;/* размер шрифта */
+      font-weight: 600;/* толщина шрифта */
+    }
+    /* размер банера продукта */
+    .card img {
+      padding: 2%; /* отступы */
+      width: 80%;/* ширина */
+    }
+}
+
+/* Средние девайсы, разрешение от 768 до 991.98 пикселей, ландшафная ориентация */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+    /* название продукта */
+    .card h3{
+      font-size: 1.7em;/* размер шрифта */
+      font-weight: 600;/* толщина шрифта */
+    }
+    /* размер банера продукта */
+    .card img {
+      padding: 2%; /* отступы */
+      width: 80%;/* ширина */
+    }
+  
+}
+
+/* Большие девайсы (большие десктопы) от 992px жо 1199.98px, ориентация портретная */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
+  /* название продукта */
+  .card h3{
+    font-size: 1.5em;/* размер шрифта */
+    font-weight: 600;/* толщина шрифта */
+  }
+  /* размер банера продукта */
+  .card img {
+    padding: 2%; /* отступы */
+    width: 90%;/* ширина */
+  }
+}
+
+/* Большие девайсы (большие десктопы) от 992px жо 1199.98px, ориентация ландшафтая */
+@media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) {
+    /* название продукта */
+    .card h3{
+      font-size: 1.4em;/* размер шрифта */
+      font-weight: 600;/* толщина шрифта */
+    }
+    /* размер банера продукта */
+    .card img {
+      padding: 2%; /* отступы */
+      width: 90%;/* ширина */
+    }
+}
+
+/* Большие девайсы (большие десктопы, разрешение более 1200px), ориентация портретная */
+@media (min-width: 1200px) and (orientation: portrait) {
+
+}
+
+/* Большие девайсы (большие десктопы, разрешение более 1200px), ориентация ландшафтная */
+@media (min-width: 1200px) and (orientation: landscape) {
+    /* название продукта */
+    .card h3{
+      font-size: 1.6em;/* размер шрифта */
+      font-weight: 600;/* толщина шрифта */
+    }
+    /* размер банера продукта */
+    .card img {
+      padding: 2%; /* отступы */
+      width: 60%;/* ширина */
+    }
 }

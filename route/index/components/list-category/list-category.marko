@@ -1,17 +1,16 @@
-<!-- навигация сайта -->
-<div class="btn-group">
-  <!-- заполнение навигации -->
-  <for|item| of=input.list>
+<for|item| of=input.list>
+  <!-- навигация сайта -->
+<div class="listProduct" style="background: #edeef0;">
     <h2 class="text-center category">${item.typeProduct}</h2>
     <for|product| of=item.list>
       <div class="row">
-        <card name=product.name />
-        <card name=product.name />
-        <card name=product.name />
+        <card name=product.name baner=product.baner typeImg=input.typeImg typeDevice=input.typeDevice />
+        <card name=product.name baner=product.baner typeImg=input.typeImg typeDevice=input.typeDevice />
+        <card name=product.name baner=product.baner typeImg=input.typeImg typeDevice=input.typeDevice />
       </div>
     </for>
-    <hr>
+  </div>
   </for>
 
-</div>
+
 
