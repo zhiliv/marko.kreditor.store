@@ -1,121 +1,49 @@
-.category {
-	color: #285473;
-	margin: 0px;
-}
-
-.listProduct {
-	border: 1px solid #285473;
-	margin-top: 1vh;
-}
-
-/* -------------------------- */
-
 /* Экстрамалые девайсы («портретные телефоны») < 576px, портрентная ориентация */
 @media (max-width: 575.98px) and (orientation: portrait) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 1.9em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 4vw;
-	}
+
 }
 
 /* Экстрамалые девайсы («портретные телефоны») < 576px), ландщафная ориентация */
 @media (max-width: 575.98px) and (orientation: landscape) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 1.9em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 4vw;
-	}
+
 }
 
 /* Малые девайсы, разрешение от 576 до 767.98 пикселей, портретаня ориентаци */
 @media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.1em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 3vw;
-	}
+
 }
 
 /* Малые девайсы, разрешенеи от 576 до 767.98, ландшафтная ориентация */
 @media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.4em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 3vw;
-	}
+
 }
 
 /* Средние девайсы, разрешение от 768 до 991.98 пикселей, портретная ориентация */
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.2em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 2vw;
-	}
+
 }
 
 /* Средние девайсы, разрешение от 768 до 991.98 пикселей, ландшафная ориентация */
 @media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.2em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 2vw;
-	}
+
 }
 
 /* Большие девайсы (большие десктопы) от 992px жо 1199.98px, ориентация портретная */
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: portrait) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.2em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 1.5vw;
-	}
+
 }
 
 /* Большие девайсы (большие десктопы) от 992px жо 1199.98px, ориентация ландшафтая */
 @media (min-width: 992px) and (max-width: 1199.98px) and (orientation: landscape) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.2em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 1.5vw;
-	}
+
 }
 
 /* Большие девайсы (большие десктопы, разрешение более 1200px), ориентация ландшафтная */
 @media (min-width: 1200px) and (orientation: portrait) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.4em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 1vw;
-	}
+
 }
 
 /* Большие девайсы (большие десктопы, разрешение более 1200px), ориентация ландшафтная */
 @media (min-width: 1200px) and (orientation: landscape) {
-	/* название категории продукта */
-	h2.category {
-		font-size: 2.4em; /* размер шрифта */
-	}
-	.listProduct {
-		padding: 1vw;
-	}
+
 }
