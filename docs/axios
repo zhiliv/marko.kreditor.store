@@ -1,0 +1,22 @@
+client
+  test(event) {
+    const axios = require('axios');
+    // Optionally the request above could also be done as
+axios.post('/test', {
+  params: {
+    ID: 12345
+  }
+})
+.then(function (response) {
+  console.log(response);
+})
+  }
+
+  server
+  router.post('/test', async (ctx, next) => {
+  let p1 = ctx.request.body // your POST params
+  console.log("TCL: p1", p1)
+let p2= ctx.params // URL params, like :id
+console.log("TCL: p2", p2)
+ctx.body = 'Завершено'
+})

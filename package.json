@@ -13,6 +13,7 @@
 		"@lasso/marko-taglib": "^1.0.15",
 		"app-root-path": "^3.0.0",
 		"async": "^3.1.0",
+		"axios": "^0.19.0",
 		"bootstrap": "^4.3.1",
 		"browser-refresh-taglib": "^1.1.0",
 		"cli-color": "^2.0.0",

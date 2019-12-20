@@ -6,7 +6,7 @@
   <header/>
   <body>
     <!-- навигационное меню -->
-    <navbar navbar=input.navbar typeDevice=input.typeDevice typeImg=input.typeImg />
+    <navbar navbar=input.navbar typeImg=input.typeImg/>
     <!-- содержимое сайта -->
     <div class="container-fluid">
       <!-- создание стркои -->
@@ -20,8 +20,9 @@
         <!-- блок для содержимого -->
         <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
           <!-- описание сайта -->
-          <siteDescription typeImg=input.typeImg typeDevice=input.typeDevice/>
-          <list-category list=input.listCategory typeImg=input.typeImg typeDevice=input.typeDevice/>
+          <siteDescription typeImg=input.typeImg/>
+          <list-category list=input.listCategory typeImg=input.typeImg/>
+
         </div>
 
       </div>
@@ -32,8 +33,7 @@
       defer: true
     }/> 
     <!-- автообновление страницы -->
-  <browser-refresh enabled="true"/>
-
+    <browser-refresh enabled="true"/>
 
   </body>
 

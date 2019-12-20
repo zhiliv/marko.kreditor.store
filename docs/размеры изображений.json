@@ -1,0 +1,11 @@
+{
+  "page": "index",
+  "size": [
+    { 
+      "type": "product",
+      "value": "240x180",
+      "comand": "magick nI.* -resize 180x135 -strip -quality 85 nO.*"
+    }
+
+  ]
+}
