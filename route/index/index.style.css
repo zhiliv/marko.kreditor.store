@@ -4,3 +4,7 @@
 @import url('./public/css/grid.css');
 /* подулючение стилей для работы с изображениями */
 @import url('./public/css/img.css');
+
+#main{
+  display: none;
+}

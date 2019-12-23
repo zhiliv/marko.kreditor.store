@@ -1,10 +1,16 @@
-<!-- навигация сайта -->
-<div class="btn-group">
-  <!-- заполнение навигации -->
-  <for|item| of=input.list>
-    <menu-button name=item.typeProduct/>
+<await(input.list)>
+  <!-- навигация сайта -->
+  <@then|list|>
+    <div class="btn-group">
+      <!-- заполнение навигации -->
+      <for|item| of=list>
+        <menu-button name=item.typeProduct/>
 
-  </for>
+      </for>
 
-</div>
+    </div>
+
+  </@then>
+
+</await>
 

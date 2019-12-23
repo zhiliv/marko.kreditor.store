@@ -38,10 +38,10 @@ try {
 			type: 'server',
 			msg: `Сервер запущен успешно на порту ${config.port}`
 		};
-    logs(log);
-    if (process.send) {
-      process.send({ event:'online', url:'http://localhost:80/' });
-  }
+		logs(log);
+		if (process.send) {
+			process.send({ event: 'online', url: 'http://localhost:80/' });
+		}
 	});
 } catch (err) {
 	//параметры логирования

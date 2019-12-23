@@ -1,0 +1,22 @@
+import scrollmonitor from 'scrollmonitor'
+
+class {
+  onMount() {
+    window.onload = function() {
+      document.getElementsByClassName("preloader")[0].style.display = "none";
+      document.getElementById("main").style.display = "block";
+      document.body.style.display = "block";
+      /*      document.getElementsByTagName('body')[0].style.overflowY = "scroll" */
+    };
+  }
+}
+
+<div class="preloader">
+  <div class="📦"/>
+  <div class="📦"/>
+  <div class="📦"/>
+  <div class="📦"/>
+  <div class="📦"/>
+
+</div>
+

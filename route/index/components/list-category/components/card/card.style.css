@@ -1,5 +1,10 @@
-.card{
-  padding: 5px;
+.card {
+	padding: 5px;
+}
+
+.bodyCard:hover {
+	width: 101%;
+	height: 101%;
 }
 
 /* название продукта */
@@ -12,6 +17,8 @@
 	border: 1px solid #4872a3;
 	margin: 0.3vw;
 	background: white;
+	-webkit-transition: width 2s, height 2s; /* For Safari 3.1 to 6.0 */
+	transition: width 2s, height 2s;
 }
 
 /* Экстрамалые девайсы («портретные телефоны») < 576px, портрентная ориентация */
