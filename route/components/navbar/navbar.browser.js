@@ -17,7 +17,7 @@ var marko_template = module.exports = require("marko/src/vdom").t(),
     navbar_button_tag = marko_loadTag(navbar_button_template),
     marko_attrs0 = {
         "class": "topnav",
-        id: "myTopnav"
+        id: "navber"
       },
     marko_attrs1 = {
         style: "float: left; padding: 0px; margin: 0px"

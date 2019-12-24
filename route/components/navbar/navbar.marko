@@ -1,5 +1,5 @@
 <!-- блок навигации -->
-<div class="topnav" id="myTopnav">
+<div class="topnav" id="navber">
   <!-- логотип сайта -->
   <div style="float: left; padding: 0px; margin: 0px">
     <img
@@ -9,21 +9,27 @@
       loading="lazy"/>
 
   </div>
-  <!-- заполнение навигации -->
-  <for|item| of=state.listMenu>
-    <!-- проверка на активное меню -->
-    <if(input.navbar == item.route)>
-      <!-- элемент навигации с классом active -->
-      <navbar-button class="active lnk" name=item.name route=item.route/>
+  <await(input.navbar)>
+    <@then|list1|>
+      <!-- заполнение навигации -->
+      <for|item| of=list1>
+        <!-- проверка на активное меню -->
+        <if(item.navbarActive == item.route)>
+          <!-- элемент навигации с классом active -->
+          <navbar-button class="active lnk" name=item.parent route=item.route/>
 
-    </if>
-    <else>
-      <!-- жлемент навигации -->
-      <navbar-button class="lnk" name=item.name route=item.route/>
+        </if>
+        <else>
+          <!-- жлемент навигации -->
+          <navbar-button class="lnk" name=item.parent route=item.route/>
 
-    </else>
+        </else>
 
-  </for>
+      </for>
+
+    </@then>
+
+  </await>
   <!-- значек бургера для мобильных устройств -->
   <a href="javascript:void(0);" class="icon" on-click("openBars")>
     <span on-click="openBars">&#x2630;</span>
