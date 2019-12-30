@@ -7,14 +7,15 @@
   "author": "Ivan Zhilnikov <35070562+zhiliv@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "start": "browser-refresh  index.js"
+    "start": "browser-refresh  index.js",
+    "css": "sass public//css//bootstrap.scss public/css/bootstrap.css"
   },
   "dependencies": {
     "@lasso/marko-taglib": "^1.0.15",
     "app-root-path": "^3.0.0",
     "async": "^3.1.0",
     "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.1",
     "browser-refresh-taglib": "^1.1.0",
     "cli-color": "^2.0.0",
     "compression": "^1.7.4",
@@ -30,9 +31,10 @@
     "lasso": "^3.3.1",
     "lasso-marko": "^2.4.8",
     "marko": "^4.18.27",
-    "mysql2": "^2.0.1",
+    "mysql2": "^2.1.0",
     "popper.js": "^1.16.0",
     "q": "^1.5.1",
+    "sass": "^1.24.0",
     "scrollmonitor": "^1.2.4",
     "underscore": "^1.9.1",
     "vanilla-lazyload": "^12.4.0",

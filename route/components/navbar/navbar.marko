@@ -1,40 +1,84 @@
-<!-- блок навигации -->
-<div class="topnav" id="navber">
-  <!-- логотип сайта -->
-  <div style="float: left; padding: 0px; margin: 0px">
-    <img
-      src=`/static/img/logo/logo.${input.typeImg}`
-      class="navlogo"
-      alt="logo"
-      loading="lazy"/>
+<nav class="navbar navbar-expand-lg navbar-info bg-info">
+  <button class="navbar-toggler" on-click("onOpenNav") aria-label="Меню">
+    <span class="navbar-toggler-icon"/>
 
-  </div>
-  <await(input.navbar)>
-    <@then|list1|>
-      <!-- заполнение навигации -->
-      <for|item| of=list1>
-        <!-- проверка на активное меню -->
-        <if(item.navbarActive == item.route)>
-          <!-- элемент навигации с классом active -->
-          <navbar-button class="active lnk" name=item.parent route=item.route/>
+  </button>
+  <img
+    src=`/static/img/logo/logo.${input.typeImg}`
+    class="navlogo"
+    alt="logo"
+    loading="lazy"/>
+  <div class="collapse navbar-collapse">
+    <ul class="nav">
+      <for|item, ind| of=input.nav>
+        <if(item.list.length)>
+          <li class="nav-item dropdown">
+            <if(ind == input.active)>
+              <li
+                class="nav-link dropdown-toggle active"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false">
+                ${item.parent}
+              </li>
+
+            </if>
+            <else>
+              <li
+                class="nav-link "
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false">
+                ${item.parent}
+              </li>
+
+            </else>
+            <div class="dropdown-menu">
+              <for|row, indList| of=item.list>
+                <if(indList != 0)>
+                  <li class="dropdown-item" href=`${row.route}`>${row.child}</li>
+
+                </if>
+
+              </for>
+
+            </div>
+
+          </li>
 
         </if>
         <else>
-          <!-- жлемент навигации -->
-          <navbar-button class="lnk" name=item.parent route=item.route/>
+          <if(ind == input.active)>
+            <navbar-button active="active" name=item.parent/>
+
+          </if>
+          <else>
+            <navbar-button active="" name=item.parent/>
+
+          </else>
 
         </else>
 
       </for>
 
-    </@then>
+    </ul>
+    <div>
+      <form style="float: right" class="form-inline">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"/>
 
-  </await>
-  <!-- значек бургера для мобильных устройств -->
-  <a href="javascript:void(0);" class="icon" on-click("openBars")>
-    <span on-click="openBars">&#x2630;</span>
+      </form>
 
-  </a>
+    </div>
 
-</div>
+  </div>
+
+</nav>
 

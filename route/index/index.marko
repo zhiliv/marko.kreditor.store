@@ -5,29 +5,23 @@
   <!-- head -->
   <header/>
   <body>
-   <preloader/>
+    <preloader/>
     <!-- навигационное меню -->
     <div id="main" key="main">
-   <navbar navbar=input.navbar typeImg=input.typeImg/>
+      <navbar active=input.active nav=input.nav typeImg=input.typeImg/>
       <!-- содержимое сайта -->
       <div class="container-fluid">
         <!-- создание стркои -->
         <div class="row">
           <!-- создание блока для меню страницы -->
-          <div class="col-sm-12 col-md-12 col-lg-3 col-xl-3">
-            <!-- меню страницы -->
-            <menu list=input.listCategory/>
-
-          </div>
           <!-- блок для содержимого -->
-          <div class="col-sm-12 col-md-12 col-lg-9 col-xl-9">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <!-- описание сайта -->
             <siteDescription typeImg=input.typeImg/>
-            <list-category list=input.listCategory typeImg=input.typeImg/>
 
           </div>
 
-        </div>
+        </div> 
 
       </div>
 

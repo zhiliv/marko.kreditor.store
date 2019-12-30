@@ -159,7 +159,8 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 2vw;
-		line-height: 1.1em; /* межстрочный отступ */
+    line-height: 1.1em; /* межстрочный отступ */
+    width: 100%
 	}
 	/* содердимое описания */
 	div.textDesc {
@@ -177,7 +178,8 @@
 	/* заголовок описания */
 	h1.titleDesc {
 		margin: 0 2vw;
-		line-height: 1.1em; /* межстрочный отступ */
+    line-height: 1.1em; /* межстрочный отступ */
+
 	}
 	/* содердимое описания */
 	div.textDesc {
