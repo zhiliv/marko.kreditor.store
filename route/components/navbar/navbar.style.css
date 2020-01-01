@@ -1,94 +1,125 @@
+/* выбранный пункт навигации */
 .nav-link.active {
+	/* цыет фона */
 	background: #55677d !important;
+	color: #e5ebf1 !important;
+}
+/* при наведении на элемент меню */
+.nav-link:hover {
+	/* цвет фона */
+	background: #285473 !important;
+	color: #e5ebf1;
 }
 
+/* стиль пункта меню */
 .nav-link {
+	/* размер шрифта */
 	font-size: 1.4em;
+	/* цвет шрифта */
 	color: #edeef0;
 }
 
-.dropdown:hover .dropdown-menu {
-	display: block !important;
-	padding: 0px !important;
-	margin: 0px !important;
-}
-
+/* выпадающее меню */
 .dropdown-menu {
+	/* высота элемента */
 	height: 0px;
-}
-
-.dropdown-menu {
+	/* внутренние отсуты */
 	padding: 0px !important;
+	/* внешние отступы */
 	margin: 0px !important;
 }
 
+/* пункт меню */
 .dropdown-item {
+	/* увет шрифта */
 	color: #e5ebf1 !important;
+	/* цвет фона */
 	background: #4a76a8 !important;
+	/* размер шрифта */
 	font-size: 1.4em;
 }
+
+/* при наведении на пункт меню */
 .dropdown-item:hover {
+	/* цвет фона */
 	background: #285473 !important;
 }
 
+/* при наведении на всплывающее меню */
 .dropdown:hover {
+	/* фон элемента */
 	background: #285473;
 }
 
+/* значек бургер-меню */
 .navbar-toggler-icon {
 	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* форма меню */
 .navbar-toggler {
+	/* границы */
 	border: 2px solid gray;
 }
 
+/* при выборе формы меню */
 .navbar-toggler:active .dropdown-menu {
+	/* показать элемент */
 	display: block !important;
 }
 
+/* меню для мобильных */
 .navbar-collapse {
+	/* отсутп с лева */
 	padding-left: 1vw;
+	/* показать элемент */
+	display: block;
 }
 
-/* Экстрамалые девайсы («портретные телефоны») < 576px, портрентная ориентация */
-@media (max-width: 575.98px) and (orientation: portrait) {
-	.nav-link {
-		width: 90vw;
+/* для полноформального меню(декстопы) */
+@media (min-width: 991.98px) {
+	/* при наведении на пункт всплывающего меню изменять меню */
+	.dropdown:hover .dropdown-menu {
+		/* показать элемент */
+		display: block !important;
+		/* внутрениие отступы */
+		padding: 0px !important;
+		/* внешние отступы */
+		margin: 0px !important;
 	}
 }
 
-/* Экстрамалые девайсы («портретные телефоны») < 576px), ландщафная ориентация */
-@media (max-width: 575.98px) and (orientation: landscape) {
+/* для портативных устройств(мобильные, сматфоны и планшеты) */
+@media (max-width: 991.98px) {
+	/* нункт меню */
 	.nav-link {
+		/* ширина блока */
 		width: 90vw;
 	}
-}
-
-/* Малые девайсы, разрешение от 576 до 767.98 пикселей, портретаня ориентаци */
-@media (min-width: 576px) and (max-width: 767.98px) and (orientation: portrait) {
-	.nav-link {
-		width: 90vw;
+	/* всплывающее меню */
+	.dropdown-menu {
+		/* установка позиции */
+		position: static !important;
+		/* установка высота */
+		height: 72%;
+		/* устанвока ширины  */
+		width: 90vw !important;
 	}
-}
-
-/* Малые девайсы, разрешенеи от 576 до 767.98, ландшафтная ориентация */
-@media (min-width: 576px) and (max-width: 767.98px) and (orientation: landscape) {
-	.nav-link {
-		width: 90vw;
-	}
-}
-
-/* Средние девайсы, разрешение от 768 до 991.98 пикселей, портретная ориентация */
-@media (min-width: 768px) and (max-width: 991.98px) and (orientation: portrait) {
-	.nav-link {
-		width: 90vw;
-	}
-}
-
-/* Средние девайсы, разрешение от 768 до 991.98 пикселей, ландшафная ориентация */
-@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
-	.nav-link {
-		width: 90vw;
+	/* элемент вслывающего меню */
+	.dropdown-item {
+		/* выравнивание текста по центру */
+		text-align: !important;
+		/* установрка размера шрифта */
+		font-size: 1.4em;
+		/* установка фона  */
+		background: #5080af !important;
+		/* установка цвета шрифта */
+		color: #e5ebf1 !important;
+		/* установка границ */
+    border: 1px solid #55677d;
+    /* отступ с леовго края */
+    padding-left: 10% !important;
+    /* перенос слов */
+		white-space: pre-line;
 	}
 }

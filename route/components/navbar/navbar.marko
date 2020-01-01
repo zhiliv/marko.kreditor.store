@@ -12,9 +12,9 @@
     <ul class="nav">
       <for|item, ind| of=input.nav>
         <if(item.list.length)>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" on-click("onOpenDropdown")>
             <if(ind == input.active)>
-              <li
+              <a
                 class="nav-link dropdown-toggle active"
                 data-toggle="dropdown"
                 href="#"
@@ -22,11 +22,11 @@
                 aria-haspopup="true"
                 aria-expanded="false">
                 ${item.parent}
-              </li>
+              </a>
 
             </if>
             <else>
-              <li
+              <a
                 class="nav-link "
                 data-toggle="dropdown"
                 href="#"
@@ -34,30 +34,30 @@
                 aria-haspopup="true"
                 aria-expanded="false">
                 ${item.parent}
-              </li>
+              </a>
 
             </else>
-            <div class="dropdown-menu">
+            <ul class="dropdown-menu">
               <for|row, indList| of=item.list>
                 <if(indList != 0)>
-                  <li class="dropdown-item" href=`${row.route}`>${row.child}</li>
+                  <a class="dropdown-item" href=`${row.route}`>${row.child}</a>
 
                 </if>
 
               </for>
 
-            </div>
+            </ul>
 
           </li>
 
         </if>
         <else>
           <if(ind == input.active)>
-            <navbar-button active="active" name=item.parent/>
+            <navbar-button active="active" name=item.parent route="#"/>
 
           </if>
           <else>
-            <navbar-button active="" name=item.parent/>
+            <navbar-button active="" name=item.parent route=item.route/>
 
           </else>
 
