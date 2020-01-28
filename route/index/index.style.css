@@ -1,7 +1,0 @@
-/* подключение правил текста */
-@import url('./public/css/bootstrap.css');
-
-
-#main{
-  display: none;
-}

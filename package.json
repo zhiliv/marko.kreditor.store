@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start": "browser-refresh  index.js",
-    "css": "sass public//css//bootstrap.scss public/css/bootstrap.css"
+    "css2": "sass public//css//bootstrap.scss public/css/bootstrap.css",
+    "css": "sass public//css//materialize.scss public/css/materialize.css"
   },
   "dependencies": {
     "@lasso/marko-taglib": "^1.0.15",
@@ -30,8 +31,11 @@
     "koa2-useragent": "^0.3.2",
     "lasso": "^3.3.1",
     "lasso-marko": "^2.4.8",
+    "lasso-sass": "^3.0.0",
     "marko": "^4.18.27",
+    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^2.1.0",
+    "node-sass": "^4.13.1",
     "popper.js": "^1.16.0",
     "q": "^1.5.1",
     "sass": "^1.24.0",
