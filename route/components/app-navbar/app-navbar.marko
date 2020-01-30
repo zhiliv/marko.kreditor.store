@@ -1,26 +1,31 @@
+<dropdown-list navlist=input.navlist navActive=input.navActive/>
 <nav>
-  <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
+  <div class="nav-wrapper blue darken-3">
+    <h1 class="brand-logo logo">
+      <strong>Kreditor.store</strong>
+    </h1>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger">
       <i class="material-icons">menu</i>
     </a>
     <ul class="right hide-on-med-and-down">
-      <li>
-        <a href="sass.html">Sass</a>
+      <for|item, index| of=input.navlist>
+        <if(!item.list.length)>
+          <li>
+            <a href="sass.html">${item.parent}</a>
+          </li>
 
-      </li>
-      <li>
-        <a href="badges.html">Components</a>
+        </if>
+        <else>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target=`dropdown-${index}`>
+              ${item.parent}<i class="material-icons right">arrow_drop_down</i>
+            </a>
 
-      </li>
-      <li>
-        <a href="collapsible.html">Javascript</a>
+          </li>
 
-      </li>
-      <li>
-        <a href="mobile.html">Mobile</a>
+        </else> 
 
-      </li>
+      </for>
 
     </ul>
 
@@ -28,22 +33,10 @@
 
 </nav>
 <ul class="sidenav" id="mobile-demo">
-  <li>
-    <a href="sass.html">Sass</a>
+  <for|item| of=input.navlist>
+    <a href="sass.html">${item.parent}</a>
 
-  </li>
-  <li>
-    <a href="badges.html">Components</a>
-
-  </li>
-  <li>
-    <a href="collapsible.html">Javascript</a>
-
-  </li>
-  <li>
-    <a href="mobile.html">Mobile</a>
-
-  </li>
+  </for>
 
 </ul>
 

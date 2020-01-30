@@ -1,0 +1,26 @@
+.logo {
+  width: 20%;
+  cursor: default;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 80px;
+  margin: auto;
+  display: block;
+  -webkit-animation: bounce 1s ease 6 alternate;
+  font-size: 2em;
+  color: #fff;
+  text-align: left;
+  line-height: 60px;
+  text-shadow: black 0 0 2px;
+  margin-left: 1%;
+}
+
+@-webkit-keyframes bounce {
+  100% {
+    top: -15px;
+    text-shadow: 0 1px 0 #ccc, 0 0px 0 #ccc, 0 3px 0 #ccc, 0 1px 0 #ccc, 0 1px 0 #ccc, 0 0px 0 #ccc, 0 0px 0 #ccc,
+      0 1px 0 #ccc, 0 0px 0 #ccc, 0 0px 0px rgba(0, 0, 0, 0.3);
+  }
+}

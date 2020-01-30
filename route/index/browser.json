@@ -1,7 +1,11 @@
 
   {
     "dependencies": [
-
-    
+      "./../../node_modules/materialize-css/js/component.js",
+      "./../../node_modules/materialize-css/js/global.js",
+      "./../../node_modules/materialize-css/js/cash.js",
+      "./../../node_modules/materialize-css/js/anime.min.js",
+      "./../../node_modules/materialize-css/js/dropdown.js",
+      "./../../node_modules/materialize-css/js/sidenav.js"
     ]
 }

@@ -1,0 +1,20 @@
+<for|item, index| of=input.navlist>
+  <if(item.list.length != 0)>
+    <ul id=`dropdown-${index}` class="dropdown-content">
+      <for|item_list, index_list| of=item.list>
+        <if(index_list != 0)>
+          <li>
+            <a href="#!" class="blue darken-3">${item_list.child}</a>
+
+          </li>
+
+        </if>
+
+      </for>
+
+    </ul>
+
+  </if>
+
+</for>
+

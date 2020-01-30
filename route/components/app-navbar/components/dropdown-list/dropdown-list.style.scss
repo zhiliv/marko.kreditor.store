@@ -1,0 +1,19 @@
+.dropdown-content {
+  a {
+    color: white !important;
+    border-bottom: 1px solid white;
+    transition: background-color 0.3s;
+  }
+
+  a:hover {
+    background-color: #0e4788 !important;
+  }
+
+  a.active {
+    background-color: #2956a3  !important;
+  }
+
+  li.active{
+    background-color: #2956a3   !important;
+  }
+}
