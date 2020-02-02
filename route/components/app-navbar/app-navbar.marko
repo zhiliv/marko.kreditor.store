@@ -1,10 +1,10 @@
 <dropdown-list navlist=input.navlist navActive=input.navActive/>
 <nav>
-  <div class="nav-wrapper blue darken-3">
+  <div class="nav-wrapper blue darken-3 z-depth-5">
     <h1 class="brand-logo logo">
       <strong>Kreditor.store</strong>
     </h1>
-    <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+    <a href="#" data-target="slide-out" class="sidenav-trigger">
       <i class="material-icons">menu</i>
     </a>
     <ul class="right hide-on-med-and-down">
@@ -12,6 +12,7 @@
         <if(!item.list.length)>
           <li>
             <a href="sass.html">${item.parent}</a>
+
           </li>
 
         </if>
@@ -32,9 +33,59 @@
   </div>
 
 </nav>
+<!--
 <ul class="sidenav" id="mobile-demo">
-  <for|item| of=input.navlist>
-    <a href="sass.html">${item.parent}</a>
+<for|item, index| of=input.navlist>
+<if(!item.list.length)>
+<li>
+<a href="sass.html">${item.parent}</a>
+</li>
+</if>
+<else>
+<li>
+<a class="dropdown-trigger" href="#!" data-target=`dropdown-${index}`>
+${item.parent}<i class="material-icons right">arrow_drop_down</i>
+</a>
+</li>
+</else>
+</for>
+</ul>
+-->
+<ul id="slide-out" class="sidenav  blue darken-3">
+  <for|item, index| of=input.navlist>
+    <if(!item.list.length)>
+      <li>
+        <a class="white-text" href="sass.html">${item.parent}</a>
+
+      </li>
+
+    </if>
+    <else>
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header white-text">
+            ${item.parent}<i class="material-icons right white-text">
+arrow_drop_down</i>
+          </div>
+          <div class="collapsible-body">
+            <for|item_list, index_list| of=item.list>
+              <if(index_list != 0)>
+                <li>
+                  <a href="#!" class="sub blue darken-2 white-text">${item_list.child}</a>
+
+                </li>
+
+              </if>
+
+            </for>
+
+          </div>
+
+        </li>
+
+      </ul>
+
+    </else>
 
   </for>
 

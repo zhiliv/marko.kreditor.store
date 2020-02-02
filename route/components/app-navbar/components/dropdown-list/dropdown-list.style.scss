@@ -10,10 +10,29 @@
   }
 
   a.active {
-    background-color: #2956a3  !important;
+    background-color: #2956a3 !important;
   }
 
-  li.active{
-    background-color: #2956a3   !important;
+  li.active {
+    background-color: #2956a3 !important;
+  }
+}
+
+.sidenav {
+  li {
+    a {
+      font-size: 1.2em;
+      height: auto !important;
+      border-bottom: 1px solid white;
+      padding-left: 16px !important;
+    }
+    .collapsible-header {
+      font-size: 1.2em;
+      border-bottom: 1px solid white !important;
+
+    }
+    .sub{
+      padding-left: 32px !important;
+    }
   }
 }

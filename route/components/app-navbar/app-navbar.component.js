@@ -1,6 +1,8 @@
 module.exports = {
   onMount() {
+    sidenav();
     dropdown();
+    collapsible();
     navActive(this.input.navActive.parent);
   }
 };
@@ -14,6 +16,24 @@ const dropdown = () => {
   let elems = document.querySelectorAll('.dropdown-trigger');
   //указание что это dropdown
   M.Dropdown.init(elems, { coverTrigger: false, constrainWidth: false });
+};
+
+/**
+ * добавление растягивающегося всплывающего меню
+ * @function collapsible
+ */
+const collapsible = () => {
+  var elems = document.querySelectorAll('.collapsible');
+  let list = M.Collapsible.init(elems, {
+    //событие при открытии выпадающего списка
+    onOpenStart: el => {
+      //перебор всех элементов
+      list.forEach(row => {
+        //закрытие списка
+        row.close();
+      });
+    }
+  });
 };
 
 /**
@@ -32,4 +52,15 @@ const navActive = arg => {
       el.classList.add('active');
     }
   });
+};
+
+/**
+ * Инициализация sidenav
+ * @function sidenav
+ */
+const sidenav = () => {
+  //получение всех элементов
+  let elems = document.querySelectorAll('.sidenav');
+  //активация боковой навигации
+  M.Sidenav.init(elems);
 };

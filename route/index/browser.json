@@ -6,6 +6,7 @@
       "./../../node_modules/materialize-css/js/cash.js",
       "./../../node_modules/materialize-css/js/anime.min.js",
       "./../../node_modules/materialize-css/js/dropdown.js",
-      "./../../node_modules/materialize-css/js/sidenav.js"
+      "./../../node_modules/materialize-css/js/sidenav.js",
+      "./../../node_modules/materialize-css/js/collapsible.js"
     ]
 }

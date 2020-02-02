@@ -1582,9 +1582,9 @@ map-obj@^1.0.0, map-obj@^1.0.1:
   integrity sha1-2TPOuSBdgr3PSIb2dCvcK03qFG0=
 
 marko@^4.10.0, marko@^4.18.27:
-  version "4.18.37"
-  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.37.tgz#dbc962e45b842e61119c8884f1a8cee75ef5a7af"
-  integrity sha512-JOj8YSKXQdWF89wDyNCsh41Bh/UYuu4YpwVdIB0lvPgGlxGZtjNfmmzWbAeGNBVYKusALJk4MrjY7B9Aj2XQvA==
+  version "4.18.39"
+  resolved "https://registry.yarnpkg.com/marko/-/marko-4.18.39.tgz#167e22076c1044969a3b2b81e6692eca389ec523"
+  integrity sha512-UafLg0Y34NBpzwAYT79TgH9t112wPjS18SmfOB+kcxx2EXqepwut0TJicfRI35RYfKhHV8Fcb5+9iavpACyqJg==
   dependencies:
     app-module-path "^2.2.0"
     argly "^1.0.0"
