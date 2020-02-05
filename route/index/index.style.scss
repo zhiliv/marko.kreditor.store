@@ -8,4 +8,44 @@
 @import './../../node_modules/materialize-css/sass/components/sidenav';
 @import './../../node_modules/materialize-css/sass/components/dropdown';
 @import './../../node_modules/materialize-css/sass/components/collapsible';
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons'
+@import './../../node_modules/animatewithsass/_properties';
+@import './../../node_modules/animatewithsass/_bouncing-entrances/bounceInDown';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
+/* выпадение элемента сверху */
+.animate-down {
+  @include bounceInDown();
+}
+
+.justify {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.w-100{
+  width: 100%
+}
+
+.m-1{
+  margin:1%;
+}
+
+.b-1-gray{
+  border: 1px solid gray;
+}
+
+.p-2-1{
+  padding: 2% 1% !important;
+}
+
+.b-4-5c6bc0{
+  border: 4px outset #5c6bc0;
+}
+
+.prod-name{
+  font-size: 1.8rem ;
+}
+
+.t-b{
+  font-size: 2.8rem;
+}

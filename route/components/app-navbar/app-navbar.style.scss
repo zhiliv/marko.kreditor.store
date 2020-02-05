@@ -24,3 +24,31 @@
       0 1px 0 #ccc, 0 0px 0 #ccc, 0 0px 0px rgba(0, 0, 0, 0.3);
   }
 }
+
+
+.sidenav {
+  li {
+    a {
+      font-size: 1.2em;
+      height: auto !important;
+      border-bottom: 1px solid white;
+      padding-left: 16px !important;
+    }
+    .collapsible-header {
+      font-size: 1.2em;
+      border-bottom: 1px solid white !important;
+
+    }
+    .sub{
+      padding-left: 32px !important;
+    }
+  }
+
+  .sub.active{
+    background-color: #2956a3 !important;
+  }
+
+  .collapsible-header.active{
+    background-color: #2956a3 !important;
+  }
+}

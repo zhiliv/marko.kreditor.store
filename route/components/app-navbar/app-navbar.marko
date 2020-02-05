@@ -33,24 +33,6 @@
   </div>
 
 </nav>
-<!--
-<ul class="sidenav" id="mobile-demo">
-<for|item, index| of=input.navlist>
-<if(!item.list.length)>
-<li>
-<a href="sass.html">${item.parent}</a>
-</li>
-</if>
-<else>
-<li>
-<a class="dropdown-trigger" href="#!" data-target=`dropdown-${index}`>
-${item.parent}<i class="material-icons right">arrow_drop_down</i>
-</a>
-</li>
-</else>
-</for>
-</ul>
--->
 <ul id="slide-out" class="sidenav  blue darken-3">
   <for|item, index| of=input.navlist>
     <if(!item.list.length)>
@@ -61,6 +43,7 @@ ${item.parent}<i class="material-icons right">arrow_drop_down</i>
 
     </if>
     <else>
+      <li>
       <ul class="collapsible">
         <li>
           <div class="collapsible-header white-text">
@@ -84,6 +67,7 @@ arrow_drop_down</i>
         </li>
 
       </ul>
+    </li>
 
     </else>
 

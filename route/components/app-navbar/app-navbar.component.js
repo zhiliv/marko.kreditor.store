@@ -1,9 +1,11 @@
 module.exports = {
   onMount() {
+    let active = this.input.navActive;
     sidenav();
     dropdown();
     collapsible();
-    navActive(this.input.navActive.parent);
+    navActive(active.parent);
+    navActiveSidenav(active);
   }
 };
 
@@ -48,6 +50,32 @@ const navActive = arg => {
   Array.prototype.forEach.call(elems, function(el, i) {
     //првоерка текста элемента
     if (el.innerText == arg || el.childNodes[0].textContent == arg + `arrow_drop_down`) {
+      //при соответствии значения элемента аргументу добаляем класс
+      el.classList.add('active');
+    }
+  });
+};
+
+/**
+ * Добавление класса active для sideNav
+ * @function navActiveSidenav
+ */
+const navActiveSidenav = arg => {
+  let elA = document.querySelectorAll('.sidenav a');
+  //перебор массим
+  Array.prototype.forEach.call(elA, function(el, i) {
+    //првоерка текста элемента
+    if (el.innerText == arg.child || el.childNodes[0].textContent == arg.child) {
+      //при соответствии значения элемента аргументу добаляем класс
+      el.classList.add('active');
+    }
+  });
+
+  let elDIV = document.querySelectorAll('.sidenav .collapsible-header');
+  //перебор массим
+  Array.prototype.forEach.call(elDIV, function(el, i) {
+    //првоерка текста элемента
+    if (el.innerText == arg.parent || el.childNodes[0].textContent == arg.parent) {
       //при соответствии значения элемента аргументу добаляем класс
       el.classList.add('active');
     }
