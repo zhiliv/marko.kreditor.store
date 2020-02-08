@@ -23,6 +23,6 @@ const setHeight = () => {
   //обход всех элементов
   Array.prototype.forEach.call(list, function(el, i) {
     //установка высоты элементов
-    el.style.height = max;
+    el.style.height = max + 'px';
   });
 };

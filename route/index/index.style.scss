@@ -8,9 +8,10 @@
 @import './../../node_modules/materialize-css/sass/components/sidenav';
 @import './../../node_modules/materialize-css/sass/components/dropdown';
 @import './../../node_modules/materialize-css/sass/components/collapsible';
+@import './../../node_modules/materialize-css/sass/components/modal';
 @import './../../node_modules/animatewithsass/_properties';
 @import './../../node_modules/animatewithsass/_bouncing-entrances/bounceInDown';
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons&display=swap';
 
 /* выпадение элемента сверху */
 .animate-down {
@@ -22,30 +23,63 @@
   text-justify: inter-word;
 }
 
-.w-100{
-  width: 100%
+.w-100 {
+  width: 100%;
 }
 
-.m-1{
-  margin:1%;
+.m-1 {
+  margin: 1%;
 }
 
-.b-1-gray{
+.b-1-gray {
   border: 1px solid gray;
 }
 
-.p-2-1{
+.p-2-1 {
   padding: 2% 1% !important;
 }
 
-.b-4-5c6bc0{
+.b-4-5c6bc0 {
   border: 4px outset #5c6bc0;
 }
 
-.prod-name{
-  font-size: 1.8rem ;
+.prod-name {
+  font-size: 1.8rem;
 }
 
-.t-b{
+.t-b {
   font-size: 2.8rem;
+}
+
+.p-0 {
+  padding: 0px !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e3f2fd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1565c0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1e88e5;
+}
+
+.list-geo {
+  overflow-y: auto;
+  max-height: 400px !important;
 }

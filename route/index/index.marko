@@ -8,12 +8,15 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Сервис подбора онайлн кредитов, займов</title>
-    <meta name="description" content="Сервис kreditor.store поможет выбрать и оформить кредитную карту, кредит наличными, микрозайм, ипотечный кредит, страхование онлайн">
+    <meta
+      name="description"
+      content="Сервис kreditor.store поможет выбрать и оформить кредитную карту, кредит наличными, микрозайм, ипотечный кредит, страхование онлайн"/>
+
   </head>
   <body style="margin: 0px">
-    <app-navbar navlist=input.navlist navActive=input.navActive />
+    <app-navbar navlist=input.navlist navActive=input.navActive typeDevice=input.typeDevice/>
     <description typeImg=input.typeImg/>
-<app-list-random-product list=input.randomProduct/>
+    <app-list-random-product list=input.randomProduct/>
     <!-- скрыпты -->
     <lasso-body external-script-attrs={
       defer: true

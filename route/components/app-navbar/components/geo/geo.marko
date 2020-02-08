@@ -1,0 +1,31 @@
+<div class="b-geo" id="b-geo">
+  Ваш регион:
+  <a
+    class="waves-effect waves-light btn modal-trigger"
+    href="#m-geo"
+    id="geo"
+    on-click("getRegions", input.typeDevice)>
+    Москва
+  </a>
+
+</div>
+<!-- Modal Structure -->
+<div id="m-geo" class="blue modal">
+  <div class="row p-0 m-0">
+    <div class="col s1 m1 l1 xl1" style="padding: 0px !important">
+      <i id="back-geo" class="material-icons center" on-click("getRegions")>
+keyboard_backspace</i>
+    </div>
+    <div class="col s10 m10 l10 sl10">
+      <h4 class="center">Выберите регион</h4>
+
+    </div>
+    <div class="col s1 m1 l1 xl1" style="padding: 0px !important">
+      <i class="material-icons modal-close center" id="close-geo">close</i>
+    </div>
+
+  </div>
+  <div class="grey lighten-5 center" id="list-geo"/>
+
+</div>
+

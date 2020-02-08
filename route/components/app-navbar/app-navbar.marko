@@ -1,6 +1,7 @@
 <dropdown-list navlist=input.navlist navActive=input.navActive/>
 <nav>
   <div class="nav-wrapper blue darken-3 z-depth-5">
+    <geo typeDevice=input.typeDevice/>
     <h1 class="brand-logo logo">
       <strong>Kreditor.store</strong>
     </h1>
@@ -44,30 +45,31 @@
     </if>
     <else>
       <li>
-      <ul class="collapsible">
-        <li>
-          <div class="collapsible-header white-text">
-            ${item.parent}<i class="material-icons right white-text">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header white-text">
+              ${item.parent}<i class="material-icons right white-text">
 arrow_drop_down</i>
-          </div>
-          <div class="collapsible-body">
-            <for|item_list, index_list| of=item.list>
-              <if(index_list != 0)>
-                <li>
-                  <a href="#!" class="sub blue darken-2 white-text">${item_list.child}</a>
+            </div>
+            <div class="collapsible-body">
+              <for|item_list, index_list| of=item.list>
+                <if(index_list != 0)>
+                  <li>
+                    <a href="#!" class="sub blue darken-2 white-text">${item_list.child}</a>
 
-                </li>
+                  </li>
 
-              </if>
+                </if>
 
-            </for>
+              </for>
 
-          </div>
+            </div>
 
-        </li>
+          </li>
 
-      </ul>
-    </li>
+        </ul>
+
+      </li>
 
     </else>
 

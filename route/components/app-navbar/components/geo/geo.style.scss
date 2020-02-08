@@ -1,0 +1,33 @@
+.b-geo {
+  position: absolute;
+  display: inline-block;
+  padding-left: 35%;
+}
+
+#geo {
+  text-decoration: underline;
+}
+
+#m-geo {
+  overflow-y: hidden !important;
+  width: 70% !important;
+}
+
+@media (min-device-width: 1600px) {
+  #m-geo {
+    width: 30% !important;
+  }
+}
+
+#back-geo,
+#close-geo {
+  cursor: pointer;
+  background: #1976d2;
+  width: 100%;
+  font-size: 2.8em;
+}
+
+#back-geo:hover,
+#close-geo:hover {
+  background: #1565c0;
+}
