@@ -15,7 +15,7 @@ module.exports = {
  * */
 const dropdown = () => {
   //получение авсех dropdown
-  let elems = document.querySelectorAll('.dropdown-trigger');
+  let elems = getSelAll('.dropdown-trigger');
   //указание что это dropdown
   M.Dropdown.init(elems, { coverTrigger: false, constrainWidth: false });
 };
@@ -25,7 +25,7 @@ const dropdown = () => {
  * @function collapsible
  */
 const collapsible = () => {
-  var elems = document.querySelectorAll('.collapsible');
+  var elems = getSelAll('.collapsible');
   let list = M.Collapsible.init(elems, {
     //событие при открытии выпадающего списка
     onOpenStart: el => {
@@ -45,7 +45,7 @@ const collapsible = () => {
  */
 const navActive = arg => {
   //получение элементов по селектору
-  let elems = document.querySelectorAll('.hide-on-med-and-down > li');
+  let elems = getSelAll('.hide-on-med-and-down > li');
   //перебор массим
   Array.prototype.forEach.call(elems, function(el, i) {
     //првоерка текста элемента
@@ -61,7 +61,7 @@ const navActive = arg => {
  * @function navActiveSidenav
  */
 const navActiveSidenav = arg => {
-  let elA = document.querySelectorAll('.sidenav a');
+  let elA = getSelAll('.sidenav a');
   //перебор массим
   Array.prototype.forEach.call(elA, function(el, i) {
     //првоерка текста элемента
@@ -71,7 +71,7 @@ const navActiveSidenav = arg => {
     }
   });
 
-  let elDIV = document.querySelectorAll('.sidenav .collapsible-header');
+  let elDIV = getSelAll('.sidenav .collapsible-header');
   //перебор массим
   Array.prototype.forEach.call(elDIV, function(el, i) {
     //првоерка текста элемента
@@ -88,7 +88,7 @@ const navActiveSidenav = arg => {
  */
 const sidenav = () => {
   //получение всех элементов
-  let elems = document.querySelectorAll('.sidenav');
+  let elems = getSelAll('.sidenav');
   //активация боковой навигации
   M.Sidenav.init(elems);
 };

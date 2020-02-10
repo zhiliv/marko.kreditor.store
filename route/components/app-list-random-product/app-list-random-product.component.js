@@ -10,7 +10,7 @@ module.exports = {
  */
 const setHeight = () => {
   //получение списка элементов
-  let list = document.querySelectorAll('.product');
+  let list = getSelAll('.product');
   //переменная для хренения максимальной высоты
   let max = 0;
   //обход всех элементов для получения максимального значения высоты

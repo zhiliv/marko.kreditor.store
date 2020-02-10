@@ -1,26 +1,59 @@
 module.exports = {
   onMount() {
+    chkWidth();
     modal();
     hideEl('back-geo');
+    window.onresize = event => {
+      chkWidth();
+    };
   }
+};
+
+/**
+ * Поиск города
+ * @function searchCity
+ */
+const searchCity = list => {
+  let elem = getId('search-city');
+  M.Autocomplete.init(elem, {
+    data: list,
+    onAutocomplete: data => {
+      getCityAndRegionName(data);
+    }
+  });
+};
+
+/**
+ * Получение выбранного города и региона
+ * @function getCityAndRegionName
+ */
+const getCityAndRegionName = data => {};
+
+/**
+ * Получение всех гордов
+ * @function getAllCity
+ */
+const getAllCity = () => {
+  post('/getAllCity', null, res => {
+    searchCity(JSON.parse(res.list));
+  });
+};
+
+/**
+ * проверка ширины экрана
+ * @function chkWidth
+ */
+const chkWidth = () => {
+  window.innerWidth > 992 ? showEl('b-geo') : hideEl('b-geo');
 };
 
 module.exports.getRegions = () => {
   //получение координат пользователя
   navigator.geolocation.getCurrentPosition(show_map);
-  //создание запроса
-  let req = new XMLHttpRequest();
-  //отправляем POST запрос
-  req.open('POST', '/getRegions');
-  //указываем заголовок;
-  req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-  //отправка параметров
-  req.send();
-  //событие загрузки данных по запросу
-  req.onload = res => {
-    let arg = JSON.parse(res.target.response);
-    fillListRegions(arg);
-  };
+  post('/getRegions', null, res => {
+    fillListRegions(res);
+    getAllCity();
+  });
 };
 
 /**
@@ -31,7 +64,7 @@ module.exports.getRegions = () => {
 const listRegionForDesktop = list => {
   emptyId('list-geo');
   let view = require('./components/list-regionDesktop/list-regionDesktop');
-  view.renderSync({ list: list }).appendTo(document.getElementById('list-geo'));
+  view.renderSync({ list: list }).appendTo(getId('list-geo'));
 };
 
 /**
@@ -39,7 +72,7 @@ const listRegionForDesktop = list => {
  * @function fillListRegions
  */
 const fillListRegions = arg => {
-  if (arg.typeDevice == 'desktop') {
+  if (window.innerWidth > 992) {
     listRegionForDesktop(arg.regions);
   }
 };
@@ -56,7 +89,7 @@ const show_map = position => {
 };
 
 const modal = () => {
-  let elem = document.getElementById('m-geo');
+  let elem = getId('m-geo');
   M.Modal.init(elem);
 };
 

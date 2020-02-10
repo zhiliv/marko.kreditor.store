@@ -14,7 +14,7 @@ module.exports = {
  */
 const navDropdownItemActive = arg => {
   //получение элементов по селектору
-  let elems = document.querySelectorAll('.dropdown-content > li a');
+  let elems = getSelAll('.dropdown-content > li a');
   //перебор массим
   Array.prototype.forEach.call(elems, function(el, i) {
     //првоерка текста элемента

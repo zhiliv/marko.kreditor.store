@@ -1,39 +1,43 @@
 <dropdown-list navlist=input.navlist navActive=input.navActive/>
-<nav>
-  <div class="nav-wrapper blue darken-3 z-depth-5">
-    <geo typeDevice=input.typeDevice/>
-    <h1 class="brand-logo logo">
-      <strong>Kreditor.store</strong>
-    </h1>
-    <a href="#" data-target="slide-out" class="sidenav-trigger">
-      <i class="material-icons">menu</i>
-    </a>
-    <ul class="right hide-on-med-and-down">
-      <for|item, index| of=input.navlist>
-        <if(!item.list.length)>
-          <li>
-            <a href="sass.html">${item.parent}</a>
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper blue darken-3 z-depth-5">
+      <geo typeDevice=input.typeDevice/>
+      <h1 class="brand-logo logo">
+        <strong>Kreditor.store</strong>
+      </h1>
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <for|item, index| of=input.navlist>
+          <if(!item.list.length)>
+            <li>
+              <a href="sass.html">${item.parent}</a>
 
-          </li>
+            </li>
 
-        </if>
-        <else>
-          <li>
-            <a class="dropdown-trigger" href="#!" data-target=`dropdown-${index}`>
-              ${item.parent}<i class="material-icons right">arrow_drop_down</i>
-            </a>
+          </if>
+          <else>
+            <li>
+              <a class="dropdown-trigger" href="#!" data-target=`dropdown-${index}`>
+                ${item.parent}<i class="material-icons right">
+arrow_drop_down</i>
+              </a>
 
-          </li>
+            </li>
 
-        </else> 
+          </else> 
 
-      </for>
+        </for>
 
-    </ul>
+      </ul>
 
-  </div>
+    </div>
 
-</nav>
+  </nav>
+
+</div>
 <ul id="slide-out" class="sidenav  blue darken-3">
   <for|item, index| of=input.navlist>
     <if(!item.list.length)>
